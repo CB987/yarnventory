@@ -1,22 +1,3 @@
-let form = document.getElementById("form");
-let input = document.getElementById("input");
-let msg = document.getElementById("msg");
-let posts = document.getElementById("posts");
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    console.log("button clicked");
-
-    formValidation();
-});
-
-let formValidation = () => {
-    if (input.value === "") {
-        msg.innerHTML = "oops, you didn't enter anything";
-        console.log("utter and complete failure");
-    } else {
-        console.log("huzzah!");
-        msg.innerHTML = "";
-    }
-};
-
+// need to make the submit button work by hitting enter from the textarea
+// field for timestamp for any updates, or versions? notes field that appends, with. timestamp?

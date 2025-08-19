@@ -16,47 +16,45 @@
 </head>
 
 <body>
-<div class="container">
-
     <div class="app">
-      <h1>Yarnventory</h1>
+      <h4 class="mb-3">yarnventory</h4>
+      <img src="stylesheets/images/GeneWonkaTellMe.jpg"/>
       <div id="addNew" data-bs-toggle="modal" data-bs-target="#form">
-        <img src="stylesheets/images/GeneWonkaTellMe.jpg"/>
-        <span>tell me about your yarn!<i class="fas fa-plus"></i></span>
-        <!-- modal -->
-        <form class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">all about dat lace-weight yarn, no tangles</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>yarn brand</p>
-                        <input type="text" class="form-control" name="yarn brand" id="textInput" />
-                        <div id="msg"></div>
-                        <br />
-                        <p>significant date</p>
-                        <input type="date" class="form-control" name="significant date" id="dateInput" />
-                        <br />
-                        <p>notes</p>
-                        <textarea name="" class="form-control" id="textarea" cols="30" rows="5" ></textarea>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">oh wait never mind</button>
-                      <button type="button" class="btn btn-success">and that's it</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-          
+        <span>tell me about your yarn!</span>
+        <i class="fas fa-plus"></i>
       </div>
-      <h2>your gorgeous stash</h2>
+      <!-- <br /> -->
+      <h5 class="text-center my-3">your gorgeous stash</h5>
       <div id="tasks"></div>
-
     </div>
+  <!-- modal -->
+    <form class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">all about dat lace-weight yarn, no tangles</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+             <div class="modal-body">
+                <p>yarn brand</p>
+                <input type="text" class="form-control" name="" id="textInput" />
+                <div id="msg"></div>
+                <br />
+                <p>significant date</p>
+                <input type="date" class="form-control" name="" id="dateInput" />
+                <br />
+                <p>notes</p>
+                <textarea name="" class="form-control" id="textarea" cols="30" rows="5" ></textarea>
+            </div>
 
-</div>
+      <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">oh wait never mind</button>
+  <button type="submit" id="add" class="btn btn-success">and that's it</button>
+      </div>
+    </div>
+  </div>
+</form>
+  <script src="main.js"></script>
 </body>
 
 </html>

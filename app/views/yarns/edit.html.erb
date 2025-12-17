@@ -1,0 +1,12 @@
+<% content_for :title, "Editing yarn" %>
+
+<h1>Editing yarn</h1>
+
+<%= render "form", yarn: @yarn %>
+
+<br>
+
+<div>
+  <%= link_to "Show this yarn", @yarn %> |
+  <%= link_to "Back to yarns", yarns_path %>
+</div>

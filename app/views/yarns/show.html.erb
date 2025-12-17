@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @yarn %>
+
+<div>
+  <%= link_to "Edit this yarn", edit_yarn_path(@yarn) %> |
+  <%= link_to "Back to yarns", yarns_path %>
+
+  <%= button_to "Destroy this yarn", @yarn, method: :delete %>
+</div>

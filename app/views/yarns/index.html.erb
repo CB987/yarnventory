@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Yarns" %>
+
+<h1>Yarns</h1>
+
+<div id="yarns">
+  <% @yarns.each do |yarn| %>
+    <%= render yarn %>
+    <p>
+      <%= link_to "Show this yarn", yarn %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New yarn", new_yarn_path %>

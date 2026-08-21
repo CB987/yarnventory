@@ -64,6 +64,11 @@ group :development, :test do
 end
 
 group :development do
+  # for deployment
+  gem 'capistrano', '~> 3.19'
+  gem 'capistrano-rails', '~> 1.6'
+  gem 'capistrano-rbenv', '~> 2.2' # Use capistrano-rvm if you use RVM
+  gem 'capistrano3-puma', '>= 5.2.0'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end

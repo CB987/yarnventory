@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I don't remember anything.
+Why is the ruby version set to 3.2.3?
+no clue
+How do I even start this application?
+`rails s` but if it gives you any guff, like `version not found` then try `rbenv install 3.2.3` and/or some crap like  `rails: command not found` try `bundle install`

@@ -55,6 +55,12 @@ group :development, :test do
 
   #rspec for testing
   gem "rspec-rails"
+
+  #capybara for testing
+  gem 'capybara'
+
+  #webdrivers help capybara interact with browser
+  gem 'webdrivers'
 end
 
 group :development do
@@ -62,6 +68,6 @@ group :development do
   gem "web-console"
 end
 
-#have a snazzy emory branded footer
-# gem "railsfooter", github: "emory-libraries/rails-footer"
-gem "railsfooter", path: "~/Desktop/_mycode/hideyhole/railsfooter"
+# have a snazzy emory branded footer
+gem "railsfooter", github: "emory-libraries/rails-footer"
+# gem "railsfooter", path: "~/Desktop/rails-footer/railsfooter"

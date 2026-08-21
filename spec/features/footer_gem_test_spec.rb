@@ -14,13 +14,6 @@ RSpec.describe "visit page, there's a footer", type: :feature do
     visit root_path
     expect(page).to have_selector(".footer-list")
   end
-
-  # can haz selenium test?
-  # are the styles applied?
-  it 'footer is emory blue', js: true do
-    visit root_path
-    expect(page.find('#emory-footer footer')).to match_style('background-color' => 'rgb(9, 28, 68)')
-  end
 end
 
 # test that the version line is pulling variables

@@ -3,7 +3,10 @@ lock "~> 3.20.1"
 
 set :application, "yarnventory"
 set :repo_url, "git@github.com:CB987/yarnventory.git"
-set :branch, "main"
+# set :branch, "main"
+# set :branch, ENV['BRANCH'] || 'main'
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+
 
 # Default branch is :main
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

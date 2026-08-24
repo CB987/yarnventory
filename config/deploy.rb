@@ -9,7 +9,7 @@ set :branch, "main"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/cbarto8/web_stuff"
+set :deploy_to, "/var/www/html/clare/"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh

@@ -45,13 +45,3 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 set :rbenv_type, :system
 set :rbenv_ruby, '3.2.3' # Specify your exact Ruby version here
 set :rbenv_path, '/usr/local/rbenv'
-
-after 'deploy:publishing', 'deploy:restart'
-
-namespace :deploy do
-  task :restart do
-    on roles(:app) do
-      execute :sudo, :systemctl, :restart, :puma
-    end
-  end
-end

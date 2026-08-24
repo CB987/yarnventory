@@ -5,11 +5,11 @@ set :application, "yarnventory"
 set :repo_url, "git@github.com:CB987/yarnventory.git"
 # set :branch, "main"
 # set :branch, ENV['BRANCH'] || 'main'
-ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 
 # Default branch is :main
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/var/www/html/clare/"
@@ -45,3 +45,13 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 set :rbenv_type, :system
 set :rbenv_ruby, '3.2.3' # Specify your exact Ruby version here
 set :rbenv_path, '/usr/local/rbenv'
+
+after 'deploy:publishing', 'deploy:restart'
+
+namespace :deploy do
+  task :restart do
+    on roles(:app) do
+      execute :sudo, :systemctl, :restart, :puma
+    end
+  end
+end

@@ -7,7 +7,7 @@ GIT_SHA =
   elsif Rails.env.development? || Rails.env.test?
     `git rev-parse HEAD`.chomp
   else
-    revisions_logfile
+    `pwd`
   end
 
 BRANCH =
@@ -16,7 +16,7 @@ BRANCH =
   elsif Rails.env.development? || Rails.env.test?
     `git rev-parse --abbrev-ref HEAD`.chomp
   else
-    revisions_logfile
+    `pwd`
   end
 
 LAST_DEPLOYED =

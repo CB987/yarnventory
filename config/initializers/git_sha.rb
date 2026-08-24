@@ -7,7 +7,7 @@ GIT_SHA =
   elsif Rails.env.development? || Rails.env.test?
     `git rev-parse HEAD`.chomp
   else
-    "Unknown SHA"
+    revisions_logfile
   end
 
 BRANCH =
@@ -16,7 +16,7 @@ BRANCH =
   elsif Rails.env.development? || Rails.env.test?
     `git rev-parse --abbrev-ref HEAD`.chomp
   else
-    "Unknown branch"
+    revisions_logfile
   end
 
 LAST_DEPLOYED =
@@ -24,5 +24,5 @@ LAST_DEPLOYED =
     deployed = `tail -1 #{revisions_logfile}`.chomp.split(" ")[7]
     Date.parse(deployed).strftime("%d %B %Y")
   else
-    "Not in deployed environment"
+    "Not in kansas anymore"
   end

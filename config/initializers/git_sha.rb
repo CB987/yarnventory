@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-revisions_logfile = "../../revisions.log"
+# the important part is figuring out this path from where the app is running
+REVISIONS_LOGFILE = "../../revisions.log"
+
 GIT_SHA =
   if Rails.env.production? && File.exist?(revisions_logfile)
     `tail -1 #{revisions_logfile}`.chomp.split(" ")[3].gsub(/\)$/, "")
@@ -9,6 +11,9 @@ GIT_SHA =
   else
     `pwd`
   end
+  # if revision file exists, pull the peices,
+  # if it doesn't exist but git is installed, pull from git,
+  # no git && no revision file, be generic "unknown today etc"
 
 BRANCH =
   if Rails.env.production? && File.exist?(revisions_logfile)

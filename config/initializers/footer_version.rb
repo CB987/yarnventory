@@ -4,7 +4,7 @@
 # If you want to make changes to the file, I recommend renaming it so that it doesn't get accidentally rewritten with gem updates.
 
 # the important part is figuring out this path from where the app is running
-REVISIONS_LOGFILE = ("/opt/#{ENV['PROJECT_NAME']}/revisions.log")
+REVISIONS_LOGFILE = ("../../revisions.log")
 
 GIT_SHA =
   if File.exist?(REVISIONS_LOGFILE)

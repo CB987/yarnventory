@@ -74,5 +74,5 @@ group :development do
 end
 
 # have a snazzy emory branded footer
-# gem "railsfooter", github: "emory-libraries/rails-footer"
-gem "railsfooter", path: "~/Desktop/rails-footer/railsfooter"
+gem "railsfooter", github: "emory-libraries/rails-footer"
+# gem "railsfooter", path: "~/Desktop/rails-footer/railsfooter"

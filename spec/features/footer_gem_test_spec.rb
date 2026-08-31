@@ -14,6 +14,7 @@ RSpec.describe "visit page, there's a footer", type: :feature do
     visit root_path
     expect(page).to have_selector(".footer-list")
   end
+
 end
 
 # test that the version line is pulling variables

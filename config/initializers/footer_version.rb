@@ -23,7 +23,7 @@ BRANCH =
     File.exist?(".git")
     `git rev-parse --abbrev-ref HEAD`.chomp
   else
-    `Current branch`
+    'Current branch'
   end
 
 LAST_DEPLOYED =

@@ -4,7 +4,7 @@
 # If you want to make changes to the file, I recommend renaming it so that it doesn't get accidentally rewritten with gem updates.
 
 # if you can figure out the path to the revision log from where the app is running...
-REVISIONS_LOGFILE = Rails.root.join("revisions.log")
+REVISIONS_LOGFILE = Rails.root.join("../../revisions.log")
 GIT_LOGFILE = Rails.root.join(".git")
 
 GIT_SHA =
@@ -20,7 +20,7 @@ BRANCH =
   if
     File.exist?(REVISIONS_LOGFILE)
     `tail -1 #{REVISIONS_LOGFILE}`.chomp.split(" ")[1]
-  elsif 
+  elsif
     File.exist?(GIT_LOGFILE)
     `git rev-parse --abbrev-ref HEAD`.chomp
   else

@@ -1,0 +1,10 @@
+<h1>Cepar Feed</h1>
+<p>Find me in app/views/cepar_feed/index.html.erb</p>
+<div id="messages" style="border: 1px solid #ccc; padding: 1em; height: 200px; overflow-y: auto; margin-bottom: 1em">
+  <!--- messages will appear here --->
+</div>
+
+<form id="feed-form" onsubmit="event.preventDefault(); sendMessage(document.getElementById('chat-input').value); document.getElementById('chat-input').value = '';">
+  <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off" style="width: 80%;" />
+  <button type="submit">Send</button>
+</form>

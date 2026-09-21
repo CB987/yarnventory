@@ -1,0 +1,21 @@
+#emory-cepar-text {
+  border: 1px solid #B3371E;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.64;
+  color: #ffffff;
+  background-color: #D14124;
+  position: relative;
+  width: 100%;
+  padding: 0.75rem 5rem;
+  p.cepar-label {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8rem;
+    margin-left: -1rem;
+  }
+  p.cepar-message {
+    margin: 0
+  }
+}

@@ -25,7 +25,7 @@ module CeparFeed
       return nil unless response.is_a?(Net::HTTPSuccess)
 
       # ADD THIS LINE TEMPORARILY TO SEE WHAT THE PHP ENDPOINT IS ACTUALLY SAYING:
-      Rails.logger.info "!!! RAW ENDPOINT RESPONSE: #{response.body}"
+      puts "!!! RAW ENDPOINT RESPONSE: #{response.body}"
 
       case format
       when :html
@@ -40,7 +40,7 @@ module CeparFeed
       end
     rescue StandardError => e
       # error handling
-      defined?(Rails) ? Rails.logger.error("[CeparFeedBanner] Fetch Failed:  #{e.message}") : warn(e.message)
+      defined?(Rails) ? puts("[CeparFeedBanner] Fetch Failed:  #{e.message}") : warn(e.message)
       nil
     end
 

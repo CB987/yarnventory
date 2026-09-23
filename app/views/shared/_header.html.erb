@@ -1,5 +1,11 @@
 <header class="emory-libraries-header">
 
+  <%# cepar banner %>
+  <%= render "shared/cepar-banner" %>
+
+  <%# general notification banner %>
+  <div class="announcement-banner"></div>
+
 <%# future _navbar_links? %>
   <nav class="top-nav">
     <ul class="top-nav-left">
@@ -46,6 +52,6 @@
 
   <div class="bottom-right-wild-card"></div>
 
-  <div class="cepar-banner"></div>
-  <div class="announcement-banner"></div>
+  <%# having the hero within the header puts it on every page. other option is to move it to rendering from the home page. %>
+  <%= render "shared/hero" %>
 </header>

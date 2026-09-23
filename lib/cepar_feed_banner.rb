@@ -1,4 +1,3 @@
-require 'yaml'
 require_relative 'cepar_feed/feed_processor'
 require_relative 'cepar_feed/view_helper'
 

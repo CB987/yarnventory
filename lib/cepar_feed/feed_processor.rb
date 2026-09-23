@@ -14,10 +14,6 @@ module CeparFeed
       http.open_timeout = 2 # seconds to open connection
       http.read_timeout = 2 # seconds to wait for data
 
-      #  Net::HTTP.get_response handles SSL automatically in modern Ruby
-      # response = Net::HTTP.get_response(uri)
-      # return nil unless response.is_a?(Net::HTTPSuccess)
-
       request = Net::HTTP::Get.new(uri)
       response = http.request(request)
 
@@ -25,7 +21,7 @@ module CeparFeed
       return nil unless response.is_a?(Net::HTTPSuccess)
 
       # ADD THIS LINE TEMPORARILY TO SEE WHAT THE PHP ENDPOINT IS ACTUALLY SAYING:
-      puts "!!! RAW ENDPOINT RESPONSE: #{response.body}"
+      # puts "!!! RAW ENDPOINT RESPONSE: #{response.body}"
 
       case format
       when :html
@@ -43,15 +39,6 @@ module CeparFeed
       defined?(Rails) ? puts("[CeparFeedBanner] Fetch Failed:  #{e.message}") : warn(e.message)
       nil
     end
-
-    # headers = {}
-    # headers['If-None-Match'] = last_stored_etag if last_stored_etag
-
-    # response = Net::HTTP.get_response(uri, headers)
-
-    # if response.code == "304"
-    #   #  304 Not Modified: return data already in cache
-    # end
 
   end
 end

@@ -1,6 +1,5 @@
-GIT
-  remote: https://github.com/emory-libraries/rails-footer.git
-  revision: a7be2711b8ddbd3e1505edc58649cccbe9cc0b08
+GEM
+  remote: https://gem.coop/@emorylibraries/
   specs:
     railsfooter (1.0.0)
       rails (>= 5.0)

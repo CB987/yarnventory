@@ -1,15 +1,20 @@
 namespace :cepar_feed do
   desc "runs efficient, non-blocking 5-second background loop to refresh feed"
   task run_worker: :environment do
-    puts "starting CeparFeed background worker"
+    Rails.logger.info "[CeparFeed Worker] starting CeparFeed background monitoring daemon"
 
     loop do
       start_time = Time.now
 
       # perform network fetch and update shared cache
-      CeparFeedBanner.fetch_and_cache_feed
+      begin
+        CeparFeedBanner.fetch_and_cache_feed
+      rescue => e
+        # prevent global loop from fracturing due to deep core exceptions
+        Rails.logger.error "[CeparFeed Worker Daemon Exception]: #{e.message}"
+      end
 
-      # dynamically claculate sleep time to account for network latency
+      # dynamically calculate sleep time to account for network latency
       elapsed = Time.now - start_time
       sleep_duration = [5.0 - elapsed, 0.1].max
 

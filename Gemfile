@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "https://gems.coop"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.1"
@@ -78,5 +78,7 @@ group :development do
 end
 
 # have a snazzy emory branded footer
-gem "railsfooter", source: "https://gem.coop/@emorylibraries"
-# gem "railsfooter", path: "~/Desktop/rails-footer/railsfooter"
+# gem "railsfooter", source: "https://gem.coop/@emorylibraries"
+# gem "railsfooter", github: "emory-libraries/rails-footer"
+gem "railsfooter", path: "~/Desktop/rails-footer/railsfooter"
+# gem "railsfooter" #(for testing built gem locally)

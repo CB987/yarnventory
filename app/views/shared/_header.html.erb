@@ -6,9 +6,14 @@
   <%# general notification banner %>
   <div class="announcement-banner"></div>
 
-<%# future _navbar_links? %>
-  <nav class="top-nav">
-    <ul class="top-nav-left">
+  <div class="mobile-flip">
+  <nav class="top-nav navbar navbar-expand-md" data-bs-theme="light">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+  <%# future _navbar_links? %>
+      <ul class="top-nav-left">
         <%= link_to "home", root_path %>
         <%= link_to "about" %>
         <%= link_to "my stash", yarns_path %>
@@ -19,6 +24,7 @@
         <%= link_to "contact" %>
         <%= link_to "login" %>
       </ul>
+      </div>
   </nav>
 
 <%# the bottom-left=logo-section part would just be part of the template %>
@@ -49,8 +55,10 @@
       <span class="ELib">Emory Libraries</span>
     </div>
   </div>
+  </div>
 
-  <div class="bottom-right-wild-card"></div>
+  <div class="bottom-right-wild-card">
+    </div>
 
   <%# having the hero within the header puts it on every page. other option is to move it to rendering from the home page. %>
   <%= render "shared/hero" %>

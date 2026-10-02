@@ -1,20 +1,15 @@
 header.emory-libraries-header {
   nav.top-nav {
-    /* display: flex; */
-    /* height: 3.25rem; */
     border-bottom: 1px solid darkgray;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 0.8625rem;
     div.collapse {
-          /* display: block; */
           justify-content: space-between;
         }
     ul {
       display: flex;
-      /* flex-direction: row; */
-      /* text-align: center; */
       margin-block: 1rem;
       padding-inline: 2rem;
       :not(:last-child)::after {
@@ -47,8 +42,7 @@ header.emory-libraries-header {
       margin-bottom: -2rem;
       padding-right: 1rem;
       z-index: 3;
-      svg {
-    }}
+    }
     div.logo-words {
       display: flex;
       flex-direction: column;
@@ -68,7 +62,6 @@ header.emory-libraries-header {
 }
 
 @media (max-width: 767px) { /* Phone/Tablet Screen */
-
   header.emory-libraries-header {
     div.mobile-flip {
       display: flex;
@@ -77,9 +70,6 @@ header.emory-libraries-header {
       nav.top-nav {
         border-bottom: none;
         margin-inline: 1rem;
-        /* div.collapse {
-          display: block;
-        } */
       }
       div.shield-branding {
         margin-top: .5rem;

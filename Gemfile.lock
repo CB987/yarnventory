@@ -1,7 +1,7 @@
-GEM
-  remote: https://gem.coop/@emorylibraries/
+PATH
+  remote: ../../rails-footer/railsfooter
   specs:
-    railsfooter (1.0.0)
+    railsfooter (1.1.0)
       rails (>= 5.0)
 
 GEM

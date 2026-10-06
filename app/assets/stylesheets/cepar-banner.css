@@ -1,3 +1,7 @@
+div.shadow-banner-sanity-check {
+  border: 2px solid springgreen;
+  height: 2rem;
+}
 #emory-cepar-text {
   border: 1px solid #B3371E;
   font-family: 'Open Sans', sans-serif;

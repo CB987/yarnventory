@@ -1,8 +1,9 @@
 <% banner_text = render_feed_banner %>
-
+<div class="shadow-banner-sanity-check">
 <% if banner_text.present? %>
   <div id="emory-cepar-text">
     <p class="cepar-label">Emory Emergency Alert</p>
     <p class="cepar-message"><%= banner_text %></p>
   </div>
 <% end %>
+</div>

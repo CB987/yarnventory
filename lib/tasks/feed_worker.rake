@@ -5,7 +5,7 @@ namespace :cepar_feed do
 
     loop do
       start_time = Time.now
-
+      # puts start_time
       # perform network fetch and update shared cache
       begin
         CeparFeedBanner.fetch_and_cache_feed

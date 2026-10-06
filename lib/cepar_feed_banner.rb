@@ -5,9 +5,9 @@ module CeparFeedBanner
 
   # hardcoding cepar url as default.
   # DEV FEED FOR TESTING
-  DEFAULT_FEED_URL = "https://template.aws.emory.edu/shared-assets/emergency/alert-feed-dev.php"
+  # DEFAULT_FEED_URL = "https://template.aws.emory.edu/shared-assets/emergency/alert-feed-dev.php"
   # PROD FEED
-  # DEFAULT_FEED_URL = "https://template.aws.emory.edu/shared-assets/emergency/alert-feed.php"
+  DEFAULT_FEED_URL = "https://template.aws.emory.edu/shared-assets/emergency/alert-feed.php"
   DEFAULT_FORMAT = :html # (would be false for xml rss feed)
 
   class << self

@@ -10,7 +10,7 @@ header.emory-libraries-header {
         }
     ul {
       display: flex;
-      margin-block: 1rem;
+      margin-block: 0.5rem;
       padding-inline: 2rem;
       :not(:last-child)::after {
         content: "|";

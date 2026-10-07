@@ -1,0 +1,12 @@
+div.colorsview {
+  display: flex;
+  flex-wrap: wrap;
+  div.i-am-color{
+    height: 10rem;
+    width: 10rem;
+    p {
+      color: oklch(from <your color> round(1.21 - L) 0 0);
+      /* background: black; */
+    }
+  }
+}

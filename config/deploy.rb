@@ -55,14 +55,3 @@ namespace :deploy do
     end
   end
 end
-
-namespace :rakeloop do
-  desc 'restart rake loop service'
-  task :restart do
-    on roles(:app) do
-      execute :sudo, :systemctl, :restart, 'rakeloop.service'
-    end
-  end
-end
-
-after 'deploy:publishing', 'rakeloop:restart'

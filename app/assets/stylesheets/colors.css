@@ -1,12 +1,32 @@
 div.colorsview {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(3, 15rem);
   div.i-am-color{
-    height: 10rem;
-    width: 10rem;
+    /* height: 10vw;
+    width: 10vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 2 / auto;
+    &.eagle-blue, &.emory-blue, &.candler-lake, &.waterhub-blue {
+      grid-column: span 3/ auto;
+    }
+    &.emory-blue-10, &.waterhub-blue-10 {
+      grid-column: span 1;
+    }
+
     p {
-      color: oklch(from <your color> round(1.21 - L) 0 0);
-      /* background: black; */
+      line-height: normal;
+          color: white;
+    text-shadow: 
+      0 0 5px #000000,
+      0 0 10px #000000,
+      0 0 15px #000000,
+      0 0 20px #000000,
+      0 0 25px #000000,
+      0 0 30px #000000,
+      0 0 35px #000000;
+  }
     }
   }
-}

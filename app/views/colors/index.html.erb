@@ -1,7 +1,7 @@
 <div class="colorsview">
 
 <% @colors.each do |name, hex_value| %>
- <div class="i-am-color" style="background: <%= hex_value %>" >
+ <div class="i-am-color <%= name %>" style="background: <%= hex_value %>" >
     <p>
       <%= name %>
     </p>

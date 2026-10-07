@@ -461,7 +461,7 @@ DEPENDENCIES
   nokogiri
   propshaft
   puma (>= 5.0)
-  rails (~> 8.1.1)
+  rails (~> 8.1.4)
   railsfooter!
   rspec-rails
   rss

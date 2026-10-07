@@ -82,3 +82,4 @@ end
 # gem "railsfooter", github: "emory-libraries/rails-footer"
 gem "railsfooter", path: "~/Desktop/rails-footer/railsfooter"
 # gem "railsfooter" #(for testing built gem locally)
+

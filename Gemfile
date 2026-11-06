@@ -78,8 +78,8 @@ group :development do
 end
 
 # have a snazzy emory branded footer
-# gem "railsfooter", source: "https://gem.coop/@emorylibraries"
+gem "railsfooter", source: "https://gem.coop/@emorylibraries"
 # gem "railsfooter", github: "emory-libraries/rails-footer"
-gem "railsfooter", path: "~/Desktop/rails-footer/railsfooter"
+# gem "railsfooter", path: "~/Desktop/rails-footer/railsfooter"
 # gem "railsfooter" #(for testing built gem locally)
 

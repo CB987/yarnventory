@@ -20,10 +20,11 @@
     <%= stylesheet_link_tag :all %>
     <%= stylesheet_link_tag "railsfooter/railsfooter" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "railsfooter/header", defer: true %>
   </head>
 
   <body>
-    <%#= render "railsfooter/header" %>
+    <%= render "railsfooter/header" %>
     <%= render "shared/hero" %>
       <%= yield %>
     <!-- put footer here -->
